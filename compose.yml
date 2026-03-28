@@ -1,6 +1,6 @@
 services:
     console:
-        image: appwrite/console:dev
+        image: hmtanbir/appwrite-console:1.0.0
         build:
             context: .
             args:
