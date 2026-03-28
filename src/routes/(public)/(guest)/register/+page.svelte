@@ -128,62 +128,10 @@
 </svelte:head>
 
 <Unauthenticated coupon={data?.couponData} campaign={data?.campaign || testimonialCampaign}>
-    <svelte:fragment slot="title">Sign up</svelte:fragment>
-    <svelte:fragment>
-        <Form onSubmit={register}>
-            <Layout.Stack>
-                {#if isCloud}
-                    <div style:margin-bottom="var(--gap-s, 8px)">
-                        <Button secondary fullWidth on:click={onGithubLogin} {disabled}>
-                            <span class="icon-github" aria-hidden="true"></span>
-                            <span class="text">Sign up with GitHub</span>
-                        </Button>
-                    </div>
-                    <span class="with-separators eyebrow-heading-3">or</span>
-                {/if}
-
-                <InputText
-                    id="name"
-                    label="Name"
-                    placeholder="Your name"
-                    autofocus
-                    required
-                    autocomplete
-                    bind:value={name} />
-                <InputEmail
-                    id="email"
-                    label="Email"
-                    placeholder="Your email"
-                    required
-                    bind:value={mail} />
-                <InputPassword
-                    id="password"
-                    label="Password"
-                    placeholder="Your password"
-                    helper="Password must be at least 8 characters long"
-                    required
-                    bind:value={pass} />
-                <InputChoice required bind:value={terms} id="terms" label="terms" showLabel={false}>
-                    By registering, you agree that you have read, understand, and acknowledge our <Link.Anchor
-                        href="https://appwrite.io/privacy"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        Privacy Policy</Link.Anchor>
-                    and accept our
-                    <Link.Anchor
-                        href="https://appwrite.io/terms"
-                        target="_blank"
-                        rel="noopener noreferrer">General Terms of Use</Link.Anchor
-                    >.</InputChoice>
-
-                <Button fullWidth submit disabled={disabled || !terms}>Sign up</Button>
-            </Layout.Stack>
-        </Form>
-    </svelte:fragment>
+    <svelte:fragment slot="title">Appwrite</svelte:fragment>
     <svelte:fragment slot="links">
-        <Typography.Text variant="m-400">
-            Already got an account? <Link.Anchor href={`${base}/login${page?.url?.search ?? ''}`}
-                >Sign in</Link.Anchor>
-        </Typography.Text>
+        <Layout.Stack direction="row" justifyContent="center" alignItems="center">
+            Already have an account? <Link.Anchor href={`${base}/login`} variant="quiet">Sign in</Link.Anchor>
+        </Layout.Stack>
     </svelte:fragment>
 </Unauthenticated>
