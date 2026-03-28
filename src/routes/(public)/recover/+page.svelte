@@ -121,10 +121,6 @@
     <svelte:fragment slot="links">
         <Layout.Stack direction="row" justifyContent="center" alignItems="center">
             <Link.Anchor href={`${base}/login`} variant="quiet">Sign in</Link.Anchor>
-            <div style:height="20px">
-                <Divider vertical />
-            </div>
-            <Link.Anchor href={`${base}/register`} variant="quiet">Sign up</Link.Anchor>
         </Layout.Stack>
     </svelte:fragment>
 </Unauthenticated>

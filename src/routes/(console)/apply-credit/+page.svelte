@@ -34,7 +34,7 @@
 
     afterNavigate(({ from }) => {
         if (from?.url?.pathname) {
-            if (from.url.pathname.includes('/login') || from.url.pathname.includes('/register')) {
+            if (from.url.pathname.includes('/login')) {
                 previousPage = base;
             } else {
                 previousPage = from?.url?.pathname || previousPage;

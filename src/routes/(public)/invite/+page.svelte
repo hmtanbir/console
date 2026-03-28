@@ -62,9 +62,6 @@
                 <Alert.Inline status="warning" title="The invite link is not valid">
                     Please ask the project owner to send you a new invite.
                 </Alert.Inline>
-                <div>
-                    <Button href={`${base}/register`}>Sign up to Appwrite</Button>
-                </div>
             </Layout.Stack>
         {:else}
             <Layout.Stack>

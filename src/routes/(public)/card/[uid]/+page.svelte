@@ -108,7 +108,7 @@
                 {/if}
                 {#if variant === 'external'}
                     <a
-                        href={`${base}/register`}
+                        href={`${base}/login`}
                         class="button u-width-full-line u-main-center u-margin-block-start-16 external-btn-top"
                         data-sveltekit-reload>Claim your card</a>
                 {/if}
