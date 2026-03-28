@@ -1,6 +1,7 @@
 services:
     console:
         image: hmtanbir/appwrite-console:1.0.0
+        platform: linux/amd64
         build:
             context: .
             args:
